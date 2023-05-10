@@ -2,5 +2,9 @@ May 10th, 2023
 
 # The Odin Projects - Introduction Lesson
 
-Kali ini saya akan melanjutukan sebuah situs pembelajaran gratis di Odin Projects. Pada kesempatan kali saya akan belajar menggunakan git. Penulis akan membuat sebuah html file ke dalam sebuah direktori yang bernama odin-recipes dengan menggunakan git. Harapannya, penulis akan terbiasa menggunakan git pada saat membuat/mengembangkan suatu aplikasi.  
+To further my experience with Odin Projects' learning platform, I plan to use git. This will give me hands-on practice on how to leverage git when developing web applications. 
+
+## What is Git ?
+
+Git is a version control system that I'm currently in the process of learning. Through practice, I am becoming increasingly proficient at using it to perform various tasks.
 
