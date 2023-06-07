@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@400;700;900&family=Roboto:wght@100;300;400;700;900&display=swap');
+:root{
+    --black-200: #585858;
+    --black-400: #060606;
+    --orange:  #ff7842;
+    --red-400:  #C70039;
+    --white-100: #fff;
+    --white-200: #f9faf7;
+    --white-400: #E5E7EB;
+}
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+*{
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+li{
+    list-style: none;
+}
+h1{
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+  }
+.navbar{
+    background-color: var(--white-100);
+    color: var(--black-400);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.logo li{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+}
+.burger-menu{
+    width: 1.8rem;
+}
+.menu{
+    display: none;
+}
+.context-headr,
+.headr-caro,
+.blog-post,
+footer{
+    font-family: 'Roboto', sans-serif;
+    color: var(--black-400);
+}
+.carousel,
+.blog-post{
+    background-color: var(--white-200);
+}
+.header{
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+}
+.img-headr-wrapper::before,
+.img-headr-wrapper::after{
+    background: linear-gradient(to top,  var(--black-400) 0%,rgba(255,255,255,0) 100%);
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.img-headr-wrapper{
+    min-width: 100vw;
+    position: relative;
+}
+.img-headr{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.context-headr{
+    color: var(--white-200);
+    position: absolute;
+    margin: 2rem 1rem;
+    bottom: 0;
+    z-index: 1;
+}
+.context-headr h1{
+    font-family: 'Merriweather', serif;
+    font-size: calc(30px + 18 * ((100vw - 320px) / 580));
+}
+.context-headr p{
+    font-size: calc(12px + 7 * ((100vw - 320px) / 580));
+}
+.carousel{
+    padding: 2rem 1rem;
+}
+.headr-caro{
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.headr-caro h1{
+    font-size: calc(20px + 16 * ((100vw - 320px) / 580));
+}
+.headr-caro p{
+    font-size: calc(10px + 6 * ((100vw - 320px) / 580));
+}
+.content-caro::before,
+.content-caro::after{
+    background: linear-gradient(to right,  rgba(249, 250, 248,1) 0%,rgba(249, 250, 248,0) 100%);
+    content: '';
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.content-caro::before{
+    left: 0;
+    top: 0;
+}
+.content-caro::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.content-caro{
+    display: grid;
+    position: relative;
+    overflow-x: hidden;
+}
+.track{
+    display: flex;
+    gap: 1rem;
+    animation: scroll 40s linear infinite;
+}
+/* scroll effects */
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-200px * 7));
+    }
+}
+.card-img{
+    width: calc(200px * 14);
+    height: 200px;
+    border-radius: 5px;
+}
+.blog-post{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.8rem;
+}
+.item{
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: var(--white-100);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.item img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.descr{
+    padding: 1rem;
+}
+.descr h1{
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+}
+.descr p{
+    color: var(--black-200);
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+.descr a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140px;
+    border: solid 2px var(--orange);
+    border-radius: 5px;
+    color: #3d3d3d;
+    padding: 12px 1rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.descr a:active{
+    background-color: var(--orange);
+    color: var(--white-200);
+}
+footer{
+    background-color: var(--black-400);
+    color: var(--white-200);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: solid 4px var(--orange);
+}
+footer h1{
+    font-size: 20px;
+}
+footer p{
+    font-size: 12px;
+}
